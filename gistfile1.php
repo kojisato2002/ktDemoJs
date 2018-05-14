@@ -45,6 +45,7 @@
   $str .= "<th>Quantity</th>";	
   $str .= "</tr>";
   echo $str;
+  $cnt = 0;
 				
   for($i=0; $i<count($data['records']); $i++){
     $param = 'fileKey=' . $data['records'][$i]['添付ファイル']['value'][0]['fileKey'];
@@ -75,9 +76,11 @@
     echo "</select>";
     echo "pack</td>";
     echo "</tr>";
+    $cnt++;
 
   }
     echo "</table>";
+    echo "<input type='hidden' name='cnt' value='".$cnt."'>";
     echo "<p><input type='submit' value='Confirmation'>";
     echo "</form>";
     echo "</center>";
