@@ -31,7 +31,7 @@
 
 
   //Form
-  $str  = "<form action='gistfile2.php' method='get'>";
+  $str  = "<form action='gistfile2.php' method='post'>";
 
 
   //表示は単純なテーブルで
@@ -61,7 +61,7 @@
     echo "<td><img src='data:image/jpeg;base64,". base64_encode($contents) . "'></td>";
 
     echo "<td>";
-    echo "<select name='sel".$i."'>";
+    echo "<select name='num_order[]'l>";
     echo "<option value='0' selected>0</option>";
     echo "<option value='1'>1</option>";
     echo "<option value='2'>2</option>";
