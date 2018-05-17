@@ -1,6 +1,8 @@
 <?php
 
-  //  var_dump($_POST);
+
+  echo "<link rel='stylesheet' type='text/css' href='css/gistfile.css'>"; 
+
 
   if(isset($_POST['cnt'])){
     $cnt = $_POST['cnt'];
