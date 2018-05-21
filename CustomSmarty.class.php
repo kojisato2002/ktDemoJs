@@ -26,4 +26,3 @@ class CustomSmarty extends Smarty {
     $this->debugging  = FALSE;
   }
 }
-
