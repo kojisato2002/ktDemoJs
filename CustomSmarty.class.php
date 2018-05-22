@@ -8,21 +8,20 @@ require_once( SMARTY_DIR . 'Smarty.class.php' );
 
 class CustomSmarty extends Smarty {
 
-  function CustomSmarty() {
+  function __construct() {
 
-    $base_dir          = "./";
+    parent::__construct();
+
+    $base_dir          = "/var/www/html/jsdemo/";
 
     // テンプレートファイル(*.tpl)を保存するディレクトリ
-    $this->template_dir = $base_dir . "templates/";
+    $this->template_dir = $base_dir . "view/templates/";
 
     // テンプレートをコンパイルしたファイルを保存するディレクトリ
-    $this->compile_dir  = $base_dir . "templates_c/";
-
-    if (!file_exists($this->compile_dir)) {
-      mkdir($this->compile_dir);
-    }
+    // $this->compile_dir  = $base_dir . "templates_c/";
 
     // デバッグモードで動かす
     $this->debugging  = FALSE;
+
   }
 }
