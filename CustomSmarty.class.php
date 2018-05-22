@@ -12,13 +12,11 @@ class CustomSmarty extends Smarty {
 
     parent::__construct();
 
-    $base_dir          = "/var/www/html/jsdemo/";
-
     // テンプレートファイル(*.tpl)を保存するディレクトリ
-    $this->template_dir = $base_dir . "view/templates/";
+    $this->template_dir = "/var/www/html/jsdemo/view/templates/";
 
     // テンプレートをコンパイルしたファイルを保存するディレクトリ
-    // $this->compile_dir  = $base_dir . "templates_c/";
+    $this->compile_dir  = "/var/lib/php/smarty-3.1.32/templates_c/";
 
     // デバッグモードで動かす
     $this->debugging  = FALSE;
