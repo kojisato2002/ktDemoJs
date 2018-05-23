@@ -6,25 +6,25 @@ class ConnectKintone {
   private $subDomain ='';
   private $appNo = '';
 
-  public function getApiTokey() {
-    return $apiToken;
+  public function getApiToken() {
+    return $this->apiToken;
   }
   public function setApiToken($_apiToken) {
-    $apiToken = $_apiToken;
+    $this->apiToken = $_apiToken;
   }
 
-  public function geSubDomain() {
-    return $subDomain;
+  public function getSubDomain() {
+    return $this->subDomain;
   }
   public function setSubDomain($_subDomain) {
-    $subDomain = $_subDomain;
+    $this->subDomain = $_subDomain;
   }
 
   public function getAppNo() {
-    return $appNo;
+    return $this->appNo;
   }
   public function setAppNo($_appNo) {
-    $appNo = $_addNo;
+    $this->appNo = $_appNo;
   }
 
 }
