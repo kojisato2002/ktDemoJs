@@ -31,8 +31,9 @@ class ConnectKintone {
     );
     //コンテキストを生成
     $context = stream_context_create( $options );
+    $uri = 'https://'. $subDomain .'.cybozu.com/k/v1/records.json?app='. $appNo;
     // サーバに接続してデータを貰う
-    $contents = file_get_contents( 'https://'. $subDomain .'.cybozu.com/k/v1/records.json?app='. $appNo , FALSE, $context );
+    $contents = file_get_contents( $uri, FALSE, $context );
     
     //JSON形式からArrayに変換
     $data = json_decode($contents, true);

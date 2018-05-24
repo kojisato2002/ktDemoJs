@@ -1,7 +1,6 @@
 <?php
 
-  echo "<link rel='stylesheet' type='text/css' href='css/gistfile.css'>"; 
-
+  echo "<link rel='stylesheet' type='text/css' href='view/css/gistfile.css'>"; 
 
   // 自分のkintoneの設定
   define("API_TOKEN", "sRLfFP5SMutRsozrZw6xcnZvvWpTCgnwzZxeSTzA"); 
@@ -18,8 +17,9 @@
   );
   //コンテキストを生成
   $context = stream_context_create( $options );
+  $uri = 'https://'. SUB_DOMAIN .'.cybozu.com/k/v1/records.json?app='. APP_NO;
   // サーバに接続してデータを貰う
-  $contents = file_get_contents( 'https://'. SUB_DOMAIN .'.cybozu.com/k/v1/records.json?app='. APP_NO , FALSE, $context );
+  $contents = file_get_contents($uri , FALSE, $context );
 
   //var_dump($http_response_header); //ヘッダ表示
 				
@@ -29,10 +29,8 @@
   echo "<center>";
   echo "<h3>List of Reference Materials (RMs)</h3>";
 
-
   //Form
   $str  = "<form action='gistfile2.php' method='post'>";
-
 
   //表示は単純なテーブルで
   $str .= "<table class='table1'>";
