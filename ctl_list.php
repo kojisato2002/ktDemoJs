@@ -7,7 +7,6 @@
   define("SUB_DOMAIN", "si-team-dev"); 
   define("APP_NO", "169"); 
 
-
   //サーバ送信するHTTPヘッダを設定
   $options = array(
     'http'=>array(
@@ -21,8 +20,21 @@
   // サーバに接続してデータを貰う
   $contents = file_get_contents($uri , FALSE, $context );
 
-  //var_dump($http_response_header); //ヘッダ表示
-				
+  // var_dump($http_response_header); //ヘッダ表示
+  preg_match("/[0-9]{3}/", $http_response_header[0], $stcode);
+  switch ($stcode[0]) {
+    case '200':
+      echo "Ok!";
+      break;
+    case "404":
+      echo 404;
+      break;
+    case '500':
+      echo '500';
+    default:
+      break;
+  }
+
   //JSON形式からArrayに変換
   $data = json_decode($contents, true);
 
