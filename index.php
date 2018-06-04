@@ -1,6 +1,6 @@
 <?php
 
-require_once 'CustomSmarty.class.php';
+require_once './model/CustomSmarty.class.php';
 
 $smarty = new CustomSmarty();
 

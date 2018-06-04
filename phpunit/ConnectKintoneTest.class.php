@@ -23,6 +23,15 @@ class ConnectKintoneTest extends PHPUnit_Framework_TestCase {
     $this->assertSame(APP_NO, $ck->getAppNo());
 
   }
+
+  public function textBascException() {
+
+
+
+
+
+  }
+
 }
 
 ?> 
